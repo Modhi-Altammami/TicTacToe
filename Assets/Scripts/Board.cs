@@ -8,8 +8,8 @@ namespace Modhi.ticTacToe
         private bool isXTurn;
         private int[,] CellArray = new int[3, 3];
         public static Board instance;
-        public GameObject TextAnimation;
-        public TextMeshProUGUI results;
+        [SerializeField] private GameObject TextAnimation;
+        [SerializeField] private TextMeshProUGUI results;
         void Awake()
         {
             if (instance == null) // if instance is not initilized then instance is equal to class
