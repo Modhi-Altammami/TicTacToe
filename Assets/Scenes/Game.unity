@@ -515,6 +515,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   TextAnimation: {fileID: 1820532824}
   results: {fileID: 1045244946}
+  AppleX: {fileID: 21300000, guid: daa79de2830abc44ab4811f8b67d412a, type: 3}
+  PearO: {fileID: 21300000, guid: 8d02ba61c5763a345b543fab3a344fe1, type: 3}
 --- !u!1 &390949373
 GameObject:
   m_ObjectHideFlags: 0

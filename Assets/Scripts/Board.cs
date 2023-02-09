@@ -10,6 +10,8 @@ namespace Modhi.ticTacToe
         public static Board instance;
         [SerializeField] private GameObject TextAnimation;
         [SerializeField] private TextMeshProUGUI results;
+        [SerializeField] private Sprite AppleX;
+        [SerializeField] private Sprite PearO;
         void Awake()
         {
             if (instance == null) // if instance is not initilized then instance is equal to class
@@ -28,12 +30,12 @@ namespace Modhi.ticTacToe
         {
             if (isXTurn)
             {
-                buttonObj.GetComponentInChildren<TextMeshProUGUI>().text = "X";
+                buttonObj.GetComponentInChildren<Image>().sprite = AppleX;
                 CellArray[(int)position.x, (int)position.y] = -1;
             }
             else
             {
-                buttonObj.GetComponentInChildren<TextMeshProUGUI>().text = "O";
+                buttonObj.GetComponentInChildren<Image>().sprite = PearO;
                 CellArray[(int)position.x, (int)position.y] = 1;
             }
 
@@ -129,11 +131,11 @@ namespace Modhi.ticTacToe
         {
             if (total == CellArray.GetLength(0))
             {
-                results.text = "O wins!";
+                results.text = "Pear wins!";
             }
             else if (total == -1 * CellArray.GetLength(0))
             {
-                results.text = "X wins!";
+                results.text = "Apple wins!";
             }
             else
             {
