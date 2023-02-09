@@ -52,6 +52,10 @@ namespace Modhi.ticTacToe
             for (int i = 0; i < CellArray.GetLength(0); i++)
             {
                 total += CellArray[x, i];
+                if (CellArray[x, i] == 0)
+                {
+                    break; 
+                }
                 if (total == CellArray.GetLength(0) || total == -1 * CellArray.GetLength(0))
                 {
                     AnnounceWinner(total);
@@ -65,6 +69,10 @@ namespace Modhi.ticTacToe
             for (int i = 0; i < CellArray.GetLength(0); i++)
             {
                 total += CellArray[i, y];
+                if (CellArray[i, y] == 0)
+                {
+                    break; ;
+                }
                 if (total == CellArray.GetLength(0) || total == -1 * CellArray.GetLength(0))
                 {
                     AnnounceWinner(total);
@@ -79,6 +87,10 @@ namespace Modhi.ticTacToe
                 for (int j = 0; j < CellArray.GetLength(1); j++)
                 {
                     total += CellArray[j, j];
+                    if (CellArray[j, j] == 0)
+                    {
+                        break; 
+                    }
                     if (total == CellArray.GetLength(0) || total == -1 * CellArray.GetLength(0))
                     {
                         AnnounceWinner(total);
@@ -96,6 +108,10 @@ namespace Modhi.ticTacToe
                 for (int i = 0; i < CellArray.GetLength(0); i++)
                 {
                     total += CellArray[i, count];
+                    if (CellArray[i, count] == 0)
+                    {
+                        break; 
+                    }
                     if (total == CellArray.GetLength(0) || total == -1 * CellArray.GetLength(0))
                     {
                         AnnounceWinner(total);
