@@ -4,20 +4,24 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 
 
-public class SceneChanger : MonoBehaviour
+namespace Modhi.ticTacToe
 {
-    public void StartGame()
+    public class SceneChanger : MonoBehaviour
     {
-        SceneManager.LoadScene("Game");
+        public void StartGame()
+        {
+            SceneManager.LoadScene("Game");
+        }
+
+        public void GoBack()
+        {
+            SceneManager.LoadScene("Intro");
+        }
+
+        public void resetGame()
+        {
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        }
     }
 
-    public void GoBack()
-    {
-        SceneManager.LoadScene("Intro");
-    }
-
-    public void resetGame()
-    {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
-    }
 }

@@ -2,11 +2,16 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class MuteButtons : MonoBehaviour
+
+namespace Modhi.ticTacToe
 {
-    
-    public void sendAudio()
+    public class MuteButtons : MonoBehaviour
     {
-        AudioManage.instance.AudioControl(gameObject);
+
+        public void sendAudio()
+        {
+            AudioManage.instance.AudioControl(gameObject);
+        }
     }
+
 }

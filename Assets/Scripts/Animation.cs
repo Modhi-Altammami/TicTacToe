@@ -2,12 +2,16 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Animation : MonoBehaviour
+namespace Modhi.ticTacToe
 {
-
-    void Start()
+    public class Animation : MonoBehaviour
     {
-        LeanTween.moveY(GetComponent<RectTransform>(), 50f, 1f).setLoopPingPong();
+
+        void Start()
+        {
+            LeanTween.moveY(GetComponent<RectTransform>(), 50f, 1f).setLoopPingPong();
+        }
+
     }
 
 }
