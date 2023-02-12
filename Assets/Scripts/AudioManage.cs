@@ -39,14 +39,14 @@ namespace Modhi.ticTacToe
             if (isMute)
             {
                 AudioClip.Play();
-                btn.GetComponent<Image>().sprite = mute;
+                btn.GetComponent<Image>().sprite = unmute;
 
 
             }
             else
             {
                 AudioClip.Pause();
-                btn.GetComponent<Image>().sprite = unmute;
+                btn.GetComponent<Image>().sprite = mute;
 
 
             }
